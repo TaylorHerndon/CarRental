@@ -30,26 +30,26 @@ Public Class CarRentalForum
         DaysTextBox.ForeColor = Color.Black
 
         'Check Inputs
-        Dim InputCheck(7) As Boolean
-        InputCheck(7) = CheckString(NameTextBox.Text) 'Check if has number or empty
-        InputCheck(6) = AddressTextBox.Text = "" 'Check if empty
-        InputCheck(5) = CheckString(CityTextBox.Text) 'Check if has number or empty
-        InputCheck(4) = CheckString(StateTextBox.Text) 'Check if has number or empty
+        Dim inputCheck(7) As Boolean
+        inputCheck(7) = CheckString(NameTextBox.Text) 'Check if has number or empty
+        inputCheck(6) = AddressTextBox.Text = "" 'Check if empty
+        inputCheck(5) = CheckString(CityTextBox.Text) 'Check if has number or empty
+        inputCheck(4) = CheckString(StateTextBox.Text) 'Check if has number or empty
 
-        InputCheck(3) = CheckStringToInteger(ZipCodeTextBox.Text) 'Check if only numbers or empty
-        InputCheck(3) = Len(ZipCodeTextBox.Text) <> 5 'Check if zip code is 8 characters long
+        inputCheck(3) = CheckStringToInteger(ZipCodeTextBox.Text) 'Check if only numbers or empty
+        inputCheck(3) = Len(ZipCodeTextBox.Text) <> 5 'Check if zip code is 8 characters long
 
-        InputCheck(2) = CheckStringToInteger(BeginOdometerTextBox.Text) 'Check if only numbers or empty
-        InputCheck(1) = CheckStringToInteger(EndOdometerTextBox.Text) 'Check if only numbers or empty
+        inputCheck(2) = CheckStringToInteger(BeginOdometerTextBox.Text) 'Check if only numbers or empty
+        inputCheck(1) = CheckStringToInteger(EndOdometerTextBox.Text) 'Check if only numbers or empty
 
-        InputCheck(0) = CheckStringToInteger(DaysTextBox.Text) 'Check if only numbers or empty
+        inputCheck(0) = CheckStringToInteger(DaysTextBox.Text) 'Check if only numbers or empty
 
         'Go through the marked problems and set the focus to the top most text box with a problem
         Dim exitSub As Boolean = False
 
         For i = 0 To 7
 
-            If InputCheck(i) = True Then
+            If inputCheck(i) = True Then
 
                 Select Case i
 
