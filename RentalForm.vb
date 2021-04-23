@@ -10,7 +10,7 @@ Option Compare Binary
 
 Public Class CarRentalForum
 
-    Sub Startup() Handles Me.Activated
+    Sub Startup() Handles Me.Load
 
         'Disable the summary button on startup
         SummaryButton.Enabled = False
@@ -122,7 +122,7 @@ Public Class CarRentalForum
         'Calculate the mileage charge based off of miles driven
         Dim mileageCharge As Double = 0
 
-        If distanceDriven > 200 And distanceDriven < 500 Then
+        If distanceDriven > 200 And distanceDriven <= 500 Then
 
             'If distance driven is between 200 and 500 miles then calculate as follows
             mileageCharge = (distanceDriven - 200) * 0.12
